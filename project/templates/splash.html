@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block head %}
+<div class="col-md-6">
+  <img src="https://s3.us-east-2.amazonaws.com/schoolpinnd/pin.jpeg" height="42" width="42">
+  <strong><a href="/">schoolpinnd - Your school community network</a></strong>
+</div>
+
+<div class="col-md-2">
+</div>
+
+<div class="col-md-4 text-right">
+  <p>coming soon!</p>
+</div>
+
+{% endblock %}
+
+{% block body %}
+<div class="container splashback">
+  <div class="text-center">
+    </br></br>
+    <h2><strong>A modern, safe and effective tool to communicate with all parents and guardians in your school or district</strong></h2></br>
+    <p><strong>Quick Sign Up Now. </strong>This will help us determine which schools to target when we roll out the service and provide you with future updates.</p></br>
+  </div>
+</div>
+
+
+
+
+  <div class="container splashform">
+    <form>
+    <input type="email" id="emailbox" placeholder="your email"></input>
+
+  </form>
+<button onclick="get_email()" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" value="signup">sign up!</button>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <h2>{{ message }}</h2>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+</div>
+
+<div class="container splashextend">
+    <div class="text-center">
+      <img src="https://s3.us-east-2.amazonaws.com/schoolpinnd/hero.png" height="33%" width="33%">
+    </div>
+</div>
+
+
+<div class="container splashabout">
+  <h3>SchoolPinnd is a brand new private service which fills the gap of communication and
+    increases connectivity amongst ALL parents, guardians, residents and other stakeholders
+    of a school community in a coordinated and trusted environment.</br></h3>
+
+    <h3><strong>Better communication results in better outcomes for our children.</strong></h2></h3>
+
+</div>
+
+<div class="container splashwhy">
+
+  <div>
+    <h2>Ask and learn from each other</h2>
+    <p>SchoolPinnd is the best way to ask fellow parents/residents what’s on your mind< regarding anything related to your school or district - whether it’s about curriculum,
+      a course or class, health & wellness, budget/taxes, sports or school lunch.</p>
+  </div>
+
+  <div class="text-right">
+    <h2>Useful and convenient</h2>
+    <p class="text-right">
+      SchoolPinnd is putting parent to parent communication at the center, at your own pace, at your own time, with everybody.
+    </p>
+  </div>
+
+  <div>
+    <h2>Private and secure</h2>
+    <p>SchoolPinnd provides a private environment for all your conversations and is secure (HTTPS).</p>
+  </div>
+
+</br></br></br></br>
+
+</div>
+
+
+{% endblock %}
+
+
+{% block foot %}
+
+
+		<div class="footer-distributed">
+
+
+
+			<div class="footer-left">
+
+				<p>Contact Us</p>
+
+				<form action="#" method="post">
+
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+
+				</form>
+
+			</div>
+
+      <div class="footer-right">
+
+        <h3>school<span>pinnd</span></h3>
+
+        <p class="footer-links">
+          <span>sponsored by:</a>
+          <img src="https://s3.us-east-2.amazonaws.com/schoolpinnd/wbclogo.png">
+          <img src="https://s3.us-east-2.amazonaws.com/schoolpinnd/ascender.png">
+        </p>
+
+
+        <div class="footer-icons">
+
+        </div>
+
+      </div>
+
+		</div>
+
+{% endblock %}

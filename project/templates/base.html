@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>schoolpinnd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+
+    <link rel="stylesheet" type="text/css" href="https://s3.us-east-2.amazonaws.com/schoolpinnd/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://s3.us-east-2.amazonaws.com/schoolpinnd/main.js"></script>
+    <!-- remote scripts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="baseheader">
+              {% block head %}
+              {% endblock %}
+    </div>
+
+    <div class="splashbody">
+              {% block body %}
+              {% endblock %}
+    </div>
+
+    <div class="basefooter">
+              {% block foot %}
+              {% endblock %}
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Thanks for signing up!</h4>
+          </div>
+          <div class="modal-body center">
+            <div class="form-group">
+            <form action="/signup" method="post" class="centered">
+              <input class="form-control" type="text" name="fname" placeholder="first name"></input>
+              <input class="form-control" type="text" name="lname" placeholder="last name"></input>
+              <input class="form-control" type="text" name="school" placeholder="school name"></input>
+              <input class="form-control" type="text" name="schooldist" placeholder="school district"></input>
+              <input class="form-control" type="text" name="city" placeholder="city"></input>
+              <input class="form-control" type="text" name="state" placeholder="state"></input>
+
+              <input type="submit" class="btn btn-primary" value="Sign up!"></input>
+              <input type="hidden" name ="email" id="emailModal"></hidden>
+            </form>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

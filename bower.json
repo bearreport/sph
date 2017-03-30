@@ -1,0 +1,26 @@
+{
+  "name": "schoolpinnd",
+  "homepage": "https://github.com/realpython/ultimate-flask-front-end",
+  "authors": [
+    "Josh Bayer bayerj@gmail.com"
+  ],
+  "description": "an app for talking with your neighbors",
+  "main": "readme.txt",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "./project/static/bower_components"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "react": "^15.1.0"
+  },
+  "keywords": [
+    "schoolpinnd"
+  ],
+  "private": true
+}
